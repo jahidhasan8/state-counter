@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { COUNTER_CONTEXT } from '../App';
 
-const Child = ({count,setCount}) => {
-   
+const Child = () => {
+   const {count,setCount}=useContext(COUNTER_CONTEXT)
     return (
-        <div className='w-full mx-auto my-48 max-w-xl bg-gradient-to-tr to-purple-100 from-cyan-100 p-2 rounded-md shadow-2xl'>
+        <div className='w-full mx-auto my-7 max-w-xl bg-gradient-to-tr to-purple-100 from-cyan-100 p-2 rounded-md shadow-2xl'>
             <div className='bg-white rounded-md p-10'>
                 <h1 className='text-2xl text-center mb-5'>{count}</h1>
                 <div className='flex justify-center gap-5'>

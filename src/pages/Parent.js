@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { COUNTER_CONTEXT } from '../App';
 import Child from './Child';
 
 const Parent = () => {
-    const [count,setCount]=useState(0)
+    const {count}=useContext(COUNTER_CONTEXT)
     return (
         <div className='w-full mx-auto my-48 max-w-xl bg-gradient-to-tr to-purple-100 from-cyan-100 p-2 rounded-md shadow-2xl'>
             <div className='bg-white rounded-md p-10'>
@@ -13,7 +14,7 @@ const Parent = () => {
                     
                 </div>
             </div>
-            <Child count={count} setCount={setCount}></Child>
+            <Child ></Child>
         </div>
     );
 };
